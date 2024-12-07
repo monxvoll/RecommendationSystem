@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
 
-// Clase Node para representar usuarios y productos
+// Clase Node  para representar usuarios y productos
 public class Node implements Serializable {
     @SerializedName("id")
     private String id; // Para identificar el nodo
