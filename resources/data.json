@@ -16,6 +16,34 @@
       "id": "Grace",
       "type": "user"
     },
+    "Ivy": {
+      "id": "Ivy",
+      "type": "user"
+    },
+    "Bob": {
+      "id": "Bob",
+      "type": "user"
+    },
+    "Samsung_Galaxy": {
+      "id": "Samsung_Galaxy",
+      "type": "product"
+    },
+    "Charlie": {
+      "id": "Charlie",
+      "type": "user"
+    },
+    "Google_Pixel": {
+      "id": "Google_Pixel",
+      "type": "product"
+    },
+    "Sony_Xperia": {
+      "id": "Sony_Xperia",
+      "type": "product"
+    },
+    "quesito": {
+      "id": "quesito",
+      "type": "product"
+    },
     "Oppo": {
       "id": "Oppo",
       "type": "product"
@@ -24,17 +52,13 @@
       "id": "Alice",
       "type": "user"
     },
-    "Ivy": {
-      "id": "Ivy",
+    "Monx": {
+      "id": "Monx",
       "type": "user"
     },
     "asdfas": {
       "id": "asdfas",
       "type": "product"
-    },
-    "Bob": {
-      "id": "Bob",
-      "type": "user"
     },
     "Hank": {
       "id": "Hank",
@@ -44,24 +68,12 @@
       "id": "panela",
       "type": "product"
     },
-    "Samsung_Galaxy": {
-      "id": "Samsung_Galaxy",
-      "type": "product"
-    },
     "Eve": {
       "id": "Eve",
       "type": "user"
     },
     "OnePlus": {
       "id": "OnePlus",
-      "type": "product"
-    },
-    "Charlie": {
-      "id": "Charlie",
-      "type": "user"
-    },
-    "Google_Pixel": {
-      "id": "Google_Pixel",
       "type": "product"
     },
     "David": {
@@ -76,10 +88,6 @@
       "id": "Huawei",
       "type": "product"
     },
-    "Sony_Xperia": {
-      "id": "Sony_Xperia",
-      "type": "product"
-    },
     "Frank": {
       "id": "Frank",
       "type": "user"
@@ -90,10 +98,6 @@
     },
     "calson": {
       "id": "calson",
-      "type": "product"
-    },
-    "quesito": {
-      "id": "quesito",
       "type": "product"
     }
   },
@@ -394,6 +398,17 @@
         "type": "product"
       },
       "weight": 5
+    },
+    {
+      "source": {
+        "id": "Monx",
+        "type": "user"
+      },
+      "target": {
+        "id": "Xiaomi",
+        "type": "product"
+      },
+      "weight": 3
     }
   ]
 }
