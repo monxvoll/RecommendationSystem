@@ -36,7 +36,7 @@ public class GraphController {
         return graphManager.recommendProducts(user);
     }
 
-    // Método para mostrar el grafo en la consola
+    //  Método para mostrar el grafo en la consola
     public void displayGraph() {
         graphManager.displayGraph();
     }
