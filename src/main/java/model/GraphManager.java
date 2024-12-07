@@ -14,13 +14,13 @@ public class GraphManager {
     public GraphManager(Graph graph) {
         this.graph = graph;
     }
-    
+
 
     public void addUserRating(String userId, String productId, int rating) {
         // Verificar si el usuario ya existe
         Node user = graph.getNodeById(userId);
 
-        // Si el usuario ya existe, no permitir añadir
+        // Si el  usuario ya existe, no permitir añadir
         if (user != null) {
             System.out.println("El usuario ya existe. No se puede añadir.");
             return;
