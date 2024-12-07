@@ -23,7 +23,7 @@ public class Graph implements Serializable {
         nodes.put(node.getId(), node);
     }
 
-    // Método para agregar una arista al grafo
+    // Método para  agregar una arista al grafo
     public void addEdge(Node source, Node target, int weight) {
         Edge edge = new Edge(source, target, weight);
         edges.add(edge);
