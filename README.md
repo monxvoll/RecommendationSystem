@@ -1,7 +1,11 @@
 # Sistema de Recomendación de Productos 
 
+
+## Descripción
+Este proyecto implementa un sistema de recomendación de productos utilizando grafos. Los nodos representan usuarios y productos, mientras que las aristas representan interacciones como compras, visualizaciones y valoraciones. El sistema es capaz de manejar grandes cantidades de datos y ofrece recomendaciones personalizadas para los usuarios.
+
 ## Objetivo
-Este proyecto tiene como objetivo implementar un sistema de recomendación de productos utilizando grafos.
+Explorar y comprender las diversas aplicaciones prácticas de los grafos en situaciones reales, destacando la importancia y utilidad que estos tienen, en la resolución de problemas complejos y en la optimización de sistemas.
 
 ## Representacion Nodos & Aristas
 Los nodos se representan usuarios y productos, mientras que las aristas representan interacciones en este caso, valoraciones. 
@@ -104,10 +108,6 @@ Muestra una representación textual del grafo en la consola.
 
 Devuelve una lista de productos y sus ponderaciones basadas en las calificaciones obtenidas.
 
-# Sistema de Recomendación de Productos
-
-## Descripción
-Este proyecto implementa un sistema de recomendación de productos utilizando grafos. Los nodos representan usuarios y productos, mientras que las aristas representan interacciones como compras, visualizaciones y valoraciones. El sistema es capaz de manejar grandes cantidades de datos y ofrece recomendaciones personalizadas para los usuarios.
 
 ## Instalación
 1. **Clonar el repositorio**:
