@@ -30,7 +30,7 @@ public class Main {
             scanner.nextLine();
 
             switch (option) {
-                case 1: // Recomendar productos a un usuario
+                case 1: //Recomendar productos a un usuario
                     System.out.print("Ingrese el ID del usuario: ");
                     String userId = scanner.nextLine();
                     Node user = new Node(userId, "user");
