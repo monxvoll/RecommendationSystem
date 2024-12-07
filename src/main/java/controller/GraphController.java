@@ -45,11 +45,17 @@ public class GraphController {
         return graphManager.getProductWeights();
     }
 
-    public void addUserRating(String userId, String productId, int rating) {
-        graphManager.addUserRating(userId, productId, rating);
+    public boolean addUserRating(String userId, String productId, int rating) {
+        if(graphManager.addUserRating(userId, productId, rating)){
+            return true;
+        }
+        return false;
     }
 
-    public void deleteNode(String nodeId) {
-        graphManager.deleteNode(nodeId);
+    public boolean deleteNode(String nodeId) {
+        if(graphManager.deleteNode(nodeId)){
+            return true;
+        }
+        return false;
     }
 }
