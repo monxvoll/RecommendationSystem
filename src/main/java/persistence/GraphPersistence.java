@@ -50,7 +50,7 @@ public class GraphPersistence {
                 graph.addNode(node);
             }
 
-            // Añadir aristas al grafo
+            // Añadir  aristas al grafo
             for (Map<String, Object> edge : edgesMap) {
                 Map<String, String> sourceMap = (Map<String, String>) edge.get("source");
                 Map<String, String> targetMap = (Map<String, String>) edge.get("target");
