@@ -57,31 +57,18 @@ public class Main {
                     System.out.print("Ingrese la calificación (1-5): ");
                     int rating = scanner.nextInt();
                     scanner.nextLine(); // Consumir la nueva línea
-                    graphController.addUserRating(newUserId, productId, rating);
-                    System.err.println("Nuevo usuario y calificación añadidos.");
-
-                    // Guardar el nuevo grafo en graph.json
-                    System.err.print("Guardando a .. " + graphPath + "\n");
-                    graphController.saveGraph(graphPath);
-
-                    System.err.print("Cargando desde.. " + graphPath + "\n");
-                    graphController.loadGraph(graphPath);
-
+                    if(graphController.addUserRating(newUserId, productId, rating)){
+                        graphController.saveGraph(graphPath);//Se guarda el grafo
+                        graphController.loadGraph(graphPath);// Cargar el grafo actualizado
+                    }
                     break;
                 case 5: // Borrar nodo
                     System.out.print("Ingrese el ID del nodo a borrar: ");
                     String nodeId = scanner.nextLine();
-                    graphController.deleteNode(nodeId);
-                    System.err.println("Nodo eliminado.");
-                    //Se guarda el grafo
-
-                    System.err.print("Guardando a .. " + graphPath + "\n");
-                    graphController.saveGraph(graphPath);
-
-                    // Cargar el grafo actualizado
-                    System.err.print("Cargando desde.. " + graphPath + "\n");
-                    graphController.loadGraph(graphPath);
-
+                   if(graphController.deleteNode(nodeId)) {
+                       graphController.saveGraph(graphPath);//Se guarda el grafo
+                       graphController.loadGraph(graphPath);// Cargar el grafo actualizado
+                   }
                     break;
                 case 6:
                     exit = true;
