@@ -8,7 +8,7 @@ Este proyecto implementa un sistema de recomendación de productos utilizando gr
 Explorar y comprender las diversas aplicaciones prácticas de los grafos en situaciones reales, destacando la importancia y utilidad que estos tienen, en la resolución de problemas complejos y en la optimización de sistemas.
 
 ## Representacion Nodos & Aristas
-Los nodos se representan usuarios y productos, mientras que las aristas representan interacciones en este caso, valoraciones. 
+Los nodos  representan usuarios y productos, mientras que las aristas representan interacciones en este caso, valoraciones. 
 
 **I) Sobre los nodos**: 
 
