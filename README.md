@@ -12,11 +12,11 @@ Los nodos  representan usuarios y productos, mientras que las aristas representa
 
 **I) Sobre los nodos**: 
 
-- Se identifican con el un parametro _"id"_ y se reprensentan con un _"type"_ que indica si el nodo representa un usuario o un producto
+- Se identifican con el un parametro _"id"_ y se representan con un _"type"_ que indica si el nodo representa un usuario o un producto.
 
 **II) Sobre las aristas**: 
 
-- Relaciones compuestas por dos nodos _"source & target"_ y un peso _"weight"_. El source representa donde empieza la arista (es decir un  nodo usuario), y el target representa donde termina la arista (es decir un producto). El weight (valor entero) cumple el rol de representar la valoracion que da el usuario al producto
+- Relaciones compuestas por dos nodos _"source & target"_ y un peso _"weight"_. El source representa donde empieza la arista (es decir un  nodo usuario), y el target representa donde termina la arista (es decir un producto). El weight (valor entero) cumple el rol de la valoracion que da el usuario al producto.
 
 ## Prerequisitos
 
