@@ -1,0 +1,399 @@
+{
+  "nodes": {
+    "iPhone": {
+      "id": "iPhone",
+      "type": "product"
+    },
+    "pablo": {
+      "id": "pablo",
+      "type": "user"
+    },
+    "Xiaomi": {
+      "id": "Xiaomi",
+      "type": "product"
+    },
+    "Grace": {
+      "id": "Grace",
+      "type": "user"
+    },
+    "Oppo": {
+      "id": "Oppo",
+      "type": "product"
+    },
+    "Alice": {
+      "id": "Alice",
+      "type": "user"
+    },
+    "Ivy": {
+      "id": "Ivy",
+      "type": "user"
+    },
+    "asdfas": {
+      "id": "asdfas",
+      "type": "product"
+    },
+    "Bob": {
+      "id": "Bob",
+      "type": "user"
+    },
+    "Hank": {
+      "id": "Hank",
+      "type": "user"
+    },
+    "panela": {
+      "id": "panela",
+      "type": "product"
+    },
+    "Samsung_Galaxy": {
+      "id": "Samsung_Galaxy",
+      "type": "product"
+    },
+    "Eve": {
+      "id": "Eve",
+      "type": "user"
+    },
+    "OnePlus": {
+      "id": "OnePlus",
+      "type": "product"
+    },
+    "Charlie": {
+      "id": "Charlie",
+      "type": "user"
+    },
+    "Google_Pixel": {
+      "id": "Google_Pixel",
+      "type": "product"
+    },
+    "David": {
+      "id": "David",
+      "type": "user"
+    },
+    "LG": {
+      "id": "LG",
+      "type": "product"
+    },
+    "Huawei": {
+      "id": "Huawei",
+      "type": "product"
+    },
+    "Sony_Xperia": {
+      "id": "Sony_Xperia",
+      "type": "product"
+    },
+    "Frank": {
+      "id": "Frank",
+      "type": "user"
+    },
+    "Nokia": {
+      "id": "Nokia",
+      "type": "product"
+    },
+    "calson": {
+      "id": "calson",
+      "type": "product"
+    },
+    "quesito": {
+      "id": "quesito",
+      "type": "product"
+    }
+  },
+  "edges": [
+    {
+      "source": {
+        "id": "Alice",
+        "type": "user"
+      },
+      "target": {
+        "id": "iPhone",
+        "type": "product"
+      },
+      "weight": 5
+    },
+    {
+      "source": {
+        "id": "Alice",
+        "type": "user"
+      },
+      "target": {
+        "id": "Samsung_Galaxy",
+        "type": "product"
+      },
+      "weight": 3
+    },
+    {
+      "source": {
+        "id": "Alice",
+        "type": "user"
+      },
+      "target": {
+        "id": "Huawei",
+        "type": "product"
+      },
+      "weight": 4
+    },
+    {
+      "source": {
+        "id": "Bob",
+        "type": "user"
+      },
+      "target": {
+        "id": "iPhone",
+        "type": "product"
+      },
+      "weight": 4
+    },
+    {
+      "source": {
+        "id": "Bob",
+        "type": "user"
+      },
+      "target": {
+        "id": "Google_Pixel",
+        "type": "product"
+      },
+      "weight": 2
+    },
+    {
+      "source": {
+        "id": "Bob",
+        "type": "user"
+      },
+      "target": {
+        "id": "Sony_Xperia",
+        "type": "product"
+      },
+      "weight": 5
+    },
+    {
+      "source": {
+        "id": "Charlie",
+        "type": "user"
+      },
+      "target": {
+        "id": "OnePlus",
+        "type": "product"
+      },
+      "weight": 5
+    },
+    {
+      "source": {
+        "id": "Charlie",
+        "type": "user"
+      },
+      "target": {
+        "id": "Xiaomi",
+        "type": "product"
+      },
+      "weight": 4
+    },
+    {
+      "source": {
+        "id": "Charlie",
+        "type": "user"
+      },
+      "target": {
+        "id": "Huawei",
+        "type": "product"
+      },
+      "weight": 2
+    },
+    {
+      "source": {
+        "id": "David",
+        "type": "user"
+      },
+      "target": {
+        "id": "Samsung_Galaxy",
+        "type": "product"
+      },
+      "weight": 3
+    },
+    {
+      "source": {
+        "id": "David",
+        "type": "user"
+      },
+      "target": {
+        "id": "Google_Pixel",
+        "type": "product"
+      },
+      "weight": 5
+    },
+    {
+      "source": {
+        "id": "David",
+        "type": "user"
+      },
+      "target": {
+        "id": "Oppo",
+        "type": "product"
+      },
+      "weight": 4
+    },
+    {
+      "source": {
+        "id": "Eve",
+        "type": "user"
+      },
+      "target": {
+        "id": "Xiaomi",
+        "type": "product"
+      },
+      "weight": 4
+    },
+    {
+      "source": {
+        "id": "Eve",
+        "type": "user"
+      },
+      "target": {
+        "id": "Sony_Xperia",
+        "type": "product"
+      },
+      "weight": 3
+    },
+    {
+      "source": {
+        "id": "Eve",
+        "type": "user"
+      },
+      "target": {
+        "id": "OnePlus",
+        "type": "product"
+      },
+      "weight": 4
+    },
+    {
+      "source": {
+        "id": "Frank",
+        "type": "user"
+      },
+      "target": {
+        "id": "iPhone",
+        "type": "product"
+      },
+      "weight": 3
+    },
+    {
+      "source": {
+        "id": "Frank",
+        "type": "user"
+      },
+      "target": {
+        "id": "Oppo",
+        "type": "product"
+      },
+      "weight": 2
+    },
+    {
+      "source": {
+        "id": "Frank",
+        "type": "user"
+      },
+      "target": {
+        "id": "Google_Pixel",
+        "type": "product"
+      },
+      "weight": 4
+    },
+    {
+      "source": {
+        "id": "Grace",
+        "type": "user"
+      },
+      "target": {
+        "id": "Huawei",
+        "type": "product"
+      },
+      "weight": 4
+    },
+    {
+      "source": {
+        "id": "Grace",
+        "type": "user"
+      },
+      "target": {
+        "id": "Sony_Xperia",
+        "type": "product"
+      },
+      "weight": 3
+    },
+    {
+      "source": {
+        "id": "Grace",
+        "type": "user"
+      },
+      "target": {
+        "id": "Samsung_Galaxy",
+        "type": "product"
+      },
+      "weight": 5
+    },
+    {
+      "source": {
+        "id": "Hank",
+        "type": "user"
+      },
+      "target": {
+        "id": "Nokia",
+        "type": "product"
+      },
+      "weight": 3
+    },
+    {
+      "source": {
+        "id": "Hank",
+        "type": "user"
+      },
+      "target": {
+        "id": "LG",
+        "type": "product"
+      },
+      "weight": 4
+    },
+    {
+      "source": {
+        "id": "Hank",
+        "type": "user"
+      },
+      "target": {
+        "id": "Google_Pixel",
+        "type": "product"
+      },
+      "weight": 2
+    },
+    {
+      "source": {
+        "id": "Ivy",
+        "type": "user"
+      },
+      "target": {
+        "id": "Nokia",
+        "type": "product"
+      },
+      "weight": 4
+    },
+    {
+      "source": {
+        "id": "Ivy",
+        "type": "user"
+      },
+      "target": {
+        "id": "LG",
+        "type": "product"
+      },
+      "weight": 3
+    },
+    {
+      "source": {
+        "id": "Ivy",
+        "type": "user"
+      },
+      "target": {
+        "id": "OnePlus",
+        "type": "product"
+      },
+      "weight": 5
+    }
+  ]
+}
