@@ -16,23 +16,14 @@ public class GraphManager {
     }
 
 
-    public void addUserRating(String userId, String productId, int rating) {
+    public boolean addUserRating(String userId, String productId, int rating) {
         // Verificar si el usuario ya existe
         Node user = graph.getNodeById(userId);
 
         // Si el  usuario ya existe, no permitir añadir
         if (user != null) {
-            System.out.println("El usuario ya existe. No se puede añadir.");
-            return;
-        }
-
-        // Verificar si el producto ya existe
-        Node product = graph.getNodeById(productId);
-
-        // Si el producto ya existe, no permitir añadir
-        if (product != null) {
-            System.out.println("El producto ya existe. No se puede añadir.");
-            return;
+            System.err.println("El usuario ya existe. No se puede añadir.");
+            return false;
         }
 
         // Si el usuario no existe, crear uno nuevo
@@ -40,8 +31,34 @@ public class GraphManager {
         graph.addNode(user);
 
         // Si el producto no existe, crear uno nuevo
-        product = new Node(productId, "product");
+        Node product = new Node(productId, "product");
         graph.addNode(product);
+
+        // Añadir una arista con la calificación
+        graph.addEdge(user, product, rating);
+
+        System.err.println("Datos agregados con exito");
+        return true;
+    }
+
+    public void addUserRatingForTest(String userId, String productId, int rating) {
+        // Verificar si el usuario ya existe
+        Node user = graph.getNodeById(userId);
+
+        // Si el usuario no existe, crear uno nuevo
+        if (user == null) {
+            user = new Node(userId, "user");
+            graph.addNode(user);
+        }
+
+        // Verificar si el producto ya existe
+        Node product = graph.getNodeById(productId);
+
+        // Si el producto no existe, crear uno nuevo
+        if (product == null) {
+            product = new Node(productId, "product");
+            graph.addNode(product);
+        }
 
         // Añadir una arista con la calificación
         graph.addEdge(user, product, rating);
@@ -49,18 +66,26 @@ public class GraphManager {
 
 
     // Método para eliminar un nodo y todas sus conexiones
-    public void deleteNode(String nodeId) {
+    public boolean deleteNode(String nodeId) {
         Node node = graph.getNodeById(nodeId);
 
         if (node != null) {
             graph.removeNode(node);
-            System.out.println("Nodo y sus conexiones eliminados exitosamente.");
+            System.err.println("Nodo y sus conexiones eliminados exitosamente.");
+            return true;
         } else {
-            System.out.println("Nodo no encontrado.");
+            System.err.println("Nodo no encontrado.");
+            return false;
         }
     }
 
     public List<Map.Entry<Node, Integer>> recommendProducts(Node user) {
+        // Verificar si el usuario existe en el grafo
+        if (graph.getNodeById(user.getId()) == null) {
+            System.err.println("El usuario no existe en el grafo.");
+            return new ArrayList<>();
+        }
+
         Map<Node, Integer> recommendationScores = new HashMap<>(); // Almacena las valoraciones de cada producto
         Set<Node> productsRatedByUser = new HashSet<>(); // Almacena los productos ya valorados por el usuario
 
@@ -87,6 +112,7 @@ public class GraphManager {
 
         return recommendations;
     }
+
 
     public List<Map.Entry<Node, Integer>> getProductWeights() {
         Map<Node, Integer> productWeights = new HashMap<>();
