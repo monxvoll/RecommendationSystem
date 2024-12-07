@@ -14,6 +14,7 @@ public class GraphManager {
     public GraphManager(Graph graph) {
         this.graph = graph;
     }
+    
 
     public void addUserRating(String userId, String productId, int rating) {
         // Verificar si el usuario ya existe
