@@ -1,6 +1,7 @@
 package model;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class GraphManager {
     private final Graph graph;
@@ -141,7 +142,13 @@ public class GraphManager {
         return sortedProducts;
     }
 
-
+    // En tu clase GraphManager
+    public List<String> getExistingProducts() {
+        return graph.getNodes().stream()
+                .filter(node -> "product".equals(node.getType()))
+                .map(Node::getId)
+                .collect(Collectors.toList());
+    }
     public void displayGraph() {
         System.out.println(graph.toString());
     }

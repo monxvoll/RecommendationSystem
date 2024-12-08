@@ -49,7 +49,14 @@ public class GraphController {
         return graphManager.addUserRating(userId, productId, rating);
     }
 
+    //Metodo para obtener los productos existentes
+    public List<String> getExistingProducts() {
+        return graphManager.getExistingProducts();
+    }
     public boolean deleteNode(String nodeId) {
-        return graphManager.deleteNode(nodeId);
+        if(graphManager.deleteNode(nodeId)){
+            return true;
+        }
+        return false;
     }
 }
