@@ -22,7 +22,7 @@ public class Test {
 
 
         System.out.println("Generando aristas...");
-        for (int i = 1; i <= edgeCount - nodeCount; i++) { //Se resta ya que arriba ya se añadieron varias aristas
+        for (int i = 1; i <= edgeCount - nodeCount; i++) { //Se resta ya que arriba ya se añadieron varias aristas.
             String userId = "user" + (random.nextInt(nodeCount) + 1); //Asigna id aleatorias
             String productId = "product" + (random.nextInt(nodeCount) + 1);
             graphManager.addUserRatingForTest(userId, productId, random.nextInt(5) + 1);

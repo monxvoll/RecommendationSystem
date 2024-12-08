@@ -28,7 +28,7 @@ public class GraphPersistence {
         }
     }
 
-    // Método para cargar el grafo desde un archivo JSON
+    // Método para cargar el grafo desde un archivo JSON.
     public Graph loadGraph(String filePath) {
         Gson gson = new Gson();
         try (FileReader reader = new FileReader(filePath)) {

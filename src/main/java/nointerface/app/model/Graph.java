@@ -45,7 +45,7 @@ public class Graph implements Serializable {
         return edges;
     }
 
-    // Método para eliminar un nodo y sus conexiones
+    //  Método para eliminar un nodo y sus conexiones
     public void removeNode(Node node) {
         nodes.remove(node.getId()); //Elimina un nodo del mapa
         Iterator<Edge> iterator = edges.iterator(); //Prepara un iterador sobre la lista de aristas

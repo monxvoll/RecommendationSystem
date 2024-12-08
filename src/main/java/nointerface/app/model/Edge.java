@@ -20,7 +20,7 @@ public class Edge implements Serializable {
         this.weight = weight;
     }
 
-    // Getters
+    //Getters
     public Node getSource() {
         return source;
     }

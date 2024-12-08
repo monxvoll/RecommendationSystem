@@ -42,7 +42,7 @@ public class Main {
                 case 2: // Mostrar Grafo
                     graphController.displayGraph();
                     break;
-                case 3: // Mostrar ponderado de los productos actuales
+                case 3: // Mostrar ponderado de los productos actuales.
                     System.err.print("Ponderados de productos:\n");
                     List<Map.Entry<Node, Integer>> productWeights = graphController.getProductWeights();
                     for (Map.Entry<Node, Integer> entry : productWeights) {

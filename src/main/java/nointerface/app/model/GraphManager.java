@@ -142,7 +142,7 @@ public class GraphManager {
         return sortedProducts;
     }
 
-    // En tu clase GraphManager
+
     public List<String> getExistingProducts() {
         return graph.getNodes().stream()
                 .filter(node -> "product".equals(node.getType()))
