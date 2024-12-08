@@ -9,8 +9,9 @@ import java.util.Map;
 
 // Clase Graph para gestionar nodos y aristas
 public class Graph implements Serializable {
-    private Map<String, Node> nodes; // Mapa que guarda los nodos (usuarios y productos) con sus IDs como clave
-    private List<Edge> edges; // Lista que guarda las aristas (interacciones)
+    private final Map<String, Node> nodes; // Mapa que guarda como clave el nombre del producto o usuario y como valor un objeto de tipo nodo que tiene la inforamcion de esa clave
+    private final List<Edge> edges; // Lista que guarda las aristas (interacciones)
+
 
     // Constructor
     public Graph() {
@@ -31,7 +32,7 @@ public class Graph implements Serializable {
 
     // Método para obtener un nodo por su ID
     public Node getNodeById(String id) {
-        return nodes.get(id);
+        return nodes.get(id); //Verifica si en el mpa existe un valor para esa clave
     }
 
     // Método para obtener los nodos del grafo
@@ -46,12 +47,12 @@ public class Graph implements Serializable {
 
     // Método para eliminar un nodo y sus conexiones
     public void removeNode(Node node) {
-        nodes.remove(node.getId());
-        Iterator<Edge> iterator = edges.iterator();
-        while (iterator.hasNext()) {
-            Edge edge = iterator.next();
-            if (edge.getSource().equals(node) || edge.getTarget().equals(node)) {
-                iterator.remove();
+        nodes.remove(node.getId()); //Elimina un nodo del mapa
+        Iterator<Edge> iterator = edges.iterator(); //Prepara un iterador sobre la lista de aristas
+        while (iterator.hasNext()) { //Recorre de a 1 a 1
+            Edge edge = iterator.next(); //Obtiene la siguiente arista
+            if (edge.getSource().equals(node) || edge.getTarget().equals(node)) {//Si el nodo era el destino o el origen
+                iterator.remove(); //Remove el iterador actual , la arista actual
             }
         }
     }

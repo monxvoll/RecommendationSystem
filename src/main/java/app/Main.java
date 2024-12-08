@@ -14,7 +14,7 @@ public class Main {
         boolean exit = false;
         final String graphPath = "resources\\data.json";
 
-        graphController.loadGraph(graphPath);
+        graphController.loadGraph(graphPath);// Carga inicial del archivo de datos
 
         while (!exit) {
             System.out.println("Menú Principal");
@@ -30,11 +30,11 @@ public class Main {
             scanner.nextLine();
 
             switch (option) {
-                case 1: //Recomendar productos a un usuario
+                case 1: // Recomendar productos a un usuario
                     System.out.print("Ingrese el ID del usuario: ");
                     String userId = scanner.nextLine();
-                    Node user = new Node(userId, "user");
-                    List<Map.Entry<Node, Integer>> recommendations = graphController.recommendProducts(user);
+                    Node user = new Node(userId, "user"); //Se crea el nodo de tipo usuario
+                    List<Map.Entry<Node, Integer>> recommendations = graphController.recommendProducts(user); // Lista de pares claves -valor (recomendaciones)
                     for (Map.Entry<Node, Integer> entry : recommendations) {
                         System.out.println(entry.getKey().getId() + " - " + entry.getKey().getType() + " (" + entry.getValue() + ")");
                     }

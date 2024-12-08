@@ -10,7 +10,7 @@ import java.util.Map;
 
 public class GraphController {
     private GraphManager graphManager;
-    private GraphPersistence graphPersistence;
+    private final GraphPersistence graphPersistence;
 
     // Constructor
     public GraphController() {
@@ -46,16 +46,10 @@ public class GraphController {
     }
 
     public boolean addUserRating(String userId, String productId, int rating) {
-        if(graphManager.addUserRating(userId, productId, rating)){
-            return true;
-        }
-        return false;
+        return graphManager.addUserRating(userId, productId, rating);
     }
 
     public boolean deleteNode(String nodeId) {
-        if(graphManager.deleteNode(nodeId)){
-            return true;
-        }
-        return false;
+        return graphManager.deleteNode(nodeId);
     }
 }

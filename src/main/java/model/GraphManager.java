@@ -3,7 +3,7 @@ package model;
 import java.util.*;
 
 public class GraphManager {
-    private Graph graph;
+    private final Graph graph;
 
     // Constructor
     public GraphManager() {
@@ -81,24 +81,26 @@ public class GraphManager {
 
     public List<Map.Entry<Node, Integer>> recommendProducts(Node user) {
         // Verificar si el usuario existe en el grafo
-        if (graph.getNodeById(user.getId()) == null) {
+        if (graph.getNodeById(user.getId()) == null) { // Utilizaz el map definido en graph para verificar si existe ese id en el map
             System.err.println("El usuario no existe en el grafo.");
             return new ArrayList<>();
         }
-
-        Map<Node, Integer> recommendationScores = new HashMap<>(); // Almacena las valoraciones de cada producto
-        Set<Node> productsRatedByUser = new HashSet<>(); // Almacena los productos ya valorados por el usuario
+        // Se crea map que almacenara las valoraciones de cada producto (clave-valor)
+        Map<Node, Integer> recommendationScores = new HashMap<>();
+        // Set que almacena los productos ya valorados por el usuario (Nodos)
+        Set<Node> productsRatedByUser = new HashSet<>();
 
         // Buscar aristas donde el nodo de origen es el usuario dado
-        for (Edge edge : graph.getEdges()) {
-            if (edge.getSource().getId().equals(user.getId())) {
-                Node product = edge.getTarget();
+        for (Edge edge : graph.getEdges()) { //Recorre cada arista de la lista
+            if (edge.getSource().getId().equals(user.getId())) { //En cado de esa arista tener como origen el usuario actual
+                Node product = edge.getTarget(); //Entonces guarda a donde apunta el usuario actual , el producto
                 productsRatedByUser.add(product);
             }
         }
 
         // Aumentar el puntaje de recomendación para productos que otros usuarios han valorado
-        for (Edge edge : graph.getEdges()) {
+        for (Edge edge : graph.getEdges()) { //Recorra cada arista de la lista
+            //Siempre y cuando el set no tenga el producto actual y su origen sea otro usuario , lo almacena
             if (!productsRatedByUser.contains(edge.getTarget()) && !edge.getSource().getId().equals(user.getId())) {
                 Node product = edge.getTarget();
                 int weight = edge.getWeight();
@@ -113,22 +115,29 @@ public class GraphManager {
         return recommendations;
     }
 
-
+    //Metodo encargado de obtener los pesos de las aristas
     public List<Map.Entry<Node, Integer>> getProductWeights() {
+        // Crear un mapa para almacenar los pesos (valoraciones) de cada producto
         Map<Node, Integer> productWeights = new HashMap<>();
 
+        // Iterar sobre todas las aristas del grafo
         for (Edge edge : graph.getEdges()) {
+            // Obtener el nodo de destino (producto) de la arista actual
             Node product = edge.getTarget();
+            // Obtener el peso asociado a la arista actual
             int weight = edge.getWeight();
+            // Añadir el peso al mapa, sumando al valor actual si el producto ya está en el mapa
             productWeights.put(product, productWeights.getOrDefault(product, 0) + weight);
         }
 
-        // Crear una lista ordenada de productos basados en los puntajes
+        // Crear una lista ordenada de productos basados en sus pesos acumulados
         List<Map.Entry<Node, Integer>> sortedProducts = new ArrayList<>(productWeights.entrySet());
         sortedProducts.sort((entry1, entry2) -> entry2.getValue() - entry1.getValue());
 
+        // Devolver la lista ordenada de productos
         return sortedProducts;
     }
+
 
     public void displayGraph() {
         System.out.println(graph.toString());
