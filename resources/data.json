@@ -28,10 +28,6 @@
       "id": "Ivy",
       "type": "user"
     },
-    "asdfas": {
-      "id": "asdfas",
-      "type": "product"
-    },
     "Bob": {
       "id": "Bob",
       "type": "user"
@@ -39,10 +35,6 @@
     "Hank": {
       "id": "Hank",
       "type": "user"
-    },
-    "panela": {
-      "id": "panela",
-      "type": "product"
     },
     "Samsung_Galaxy": {
       "id": "Samsung_Galaxy",
