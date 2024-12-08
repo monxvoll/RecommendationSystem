@@ -1,4 +1,4 @@
-package model;
+package nointerface.app.model;
 
 import java.io.Serializable;
 import java.util.ArrayList;

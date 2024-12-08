@@ -1,4 +1,4 @@
-package model;
+package nointerface.app.model;
 
 import com.google.gson.annotations.SerializedName;
 

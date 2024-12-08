@@ -1,4 +1,4 @@
-package model;
+package nointerface.app.model;
 
 import java.util.*;
 import java.util.stream.Collectors;

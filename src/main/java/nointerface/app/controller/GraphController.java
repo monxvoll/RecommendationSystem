@@ -1,9 +1,9 @@
-package controller;
+package nointerface.app.controller;
 
-import model.Graph;
-import model.Node;
-import model.GraphManager;
-import persistence.GraphPersistence;
+import nointerface.app.model.Graph;
+import nointerface.app.model.Node;
+import nointerface.app.model.GraphManager;
+import nointerface.app.persistence.GraphPersistence;
 
 import java.util.List;
 import java.util.Map;

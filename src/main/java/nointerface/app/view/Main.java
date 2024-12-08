@@ -1,7 +1,7 @@
-package app;
+package nointerface.app.view;
 
-import controller.GraphController;
-import model.Node;
+import nointerface.app.controller.GraphController;
+import nointerface.app.model.Node;
 
 import java.util.List;
 import java.util.Map;

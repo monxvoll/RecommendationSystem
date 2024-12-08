@@ -1,7 +1,7 @@
-package app;
+package nointerface.app.test;
 
-import model.GraphManager;
-import model.Node;
+import nointerface.app.model.GraphManager;
+import nointerface.app.model.Node;
 
 import java.util.Random;
 

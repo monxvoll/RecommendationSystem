@@ -1,10 +1,10 @@
-package persistence;
+package nointerface.app.persistence;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
-import model.Graph;
-import model.Node;
+import nointerface.app.model.Graph;
+import nointerface.app.model.Node;
 
 
 import java.io.FileWriter;
