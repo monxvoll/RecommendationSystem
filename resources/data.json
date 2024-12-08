@@ -44,6 +44,10 @@
       "id": "quesito",
       "type": "product"
     },
+    "MOnxi": {
+      "id": "MOnxi",
+      "type": "user"
+    },
     "Oppo": {
       "id": "Oppo",
       "type": "product"

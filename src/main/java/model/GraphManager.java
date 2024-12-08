@@ -17,10 +17,15 @@ public class GraphManager {
 
 
     public boolean addUserRating(String userId, String productId, int rating) {
+        // Verificar si el producto existe
+        Node product = graph.getNodeById(productId);
+        if (product == null) {
+            System.err.println("El producto debe existir");
+            return false;
+        }
+
         // Verificar si el usuario ya existe
         Node user = graph.getNodeById(userId);
-
-        // Si el  usuario ya existe, no permitir añadir
         if (user != null) {
             System.err.println("El usuario ya existe. No se puede añadir.");
             return false;
@@ -30,16 +35,14 @@ public class GraphManager {
         user = new Node(userId, "user");
         graph.addNode(user);
 
-        // Si el producto no existe, crear uno nuevo
-        Node product = new Node(productId, "product");
-        graph.addNode(product);
-
         // Añadir una arista con la calificación
         graph.addEdge(user, product, rating);
 
-        System.err.println("Datos agregados con exito");
+        System.err.println("Datos agregados con éxito");
         return true;
     }
+
+
 
     public void addUserRatingForTest(String userId, String productId, int rating) {
         // Verificar si el usuario ya existe
