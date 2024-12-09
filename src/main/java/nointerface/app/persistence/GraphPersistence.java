@@ -14,7 +14,7 @@ import java.lang.reflect.Type;
 import java.util.List;
 import java.util.Map;
 
-public class GraphPersistence {
+public class GraphPersistence  {
 
     // Método para guardar el grafo en un archivo JSON
     public void saveGraph(Graph graph, String filePath) {
@@ -29,13 +29,14 @@ public class GraphPersistence {
     }
 
     // Método para cargar el grafo desde un archivo JSON.
-    public Graph loadGraph(String filePath) {
+    public Graph loadGraph(String filePath){
         Gson gson = new Gson();
         try (FileReader reader = new FileReader(filePath)) {
             Type graphType = new TypeToken<Map<String, Object>>() {}.getType();
             Map<String, Object> data = gson.fromJson(reader, graphType);
 
             // Cargar nodos
+
             Map<String, Map<String, String>> nodesMap = gson.fromJson(gson.toJson(data.get("nodes")), new TypeToken<Map<String, Map<String, String>>>() {}.getType());
             // Cargar aristas
             List<Map<String, Object>> edgesMap = gson.fromJson(gson.toJson(data.get("edges")), new TypeToken<List<Map<String, Object>>>() {}.getType());
@@ -71,12 +72,16 @@ public class GraphPersistence {
             System.err.println("Grafo cargado exitosamente desde " + filePath);
             return graph;
         } catch (IOException e) {
-            e.printStackTrace();
+
             System.out.println("Error al cargar el grafo.");
             return null;
         } catch (ClassCastException e) {
-            e.printStackTrace();
+
             System.out.println("Error de casteo al cargar el grafo.");
+            return null;
+        } catch (NullPointerException e){
+
+            System.out.println("El archivo esta vacio");
             return null;
         }
     }

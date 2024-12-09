@@ -5,6 +5,7 @@ import nointerface.app.model.Node;
 import nointerface.app.model.GraphManager;
 import nointerface.app.persistence.GraphPersistence;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
@@ -29,6 +30,7 @@ public class GraphController {
         if (graph != null) {
             this.graphManager = new GraphManager(graph);
         }
+
     }
 
     // Método para recomendar productos a un usuario específico

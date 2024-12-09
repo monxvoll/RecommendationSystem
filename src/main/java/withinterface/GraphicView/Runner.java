@@ -15,6 +15,7 @@ public class Runner {
         GraphController graphController = new GraphController();
         graphController.loadGraph("resources/data.json");
 
+
         // Crear y mostrar el menú principal
         SwingUtilities.invokeLater(() -> new MenuView(graphController));
     }

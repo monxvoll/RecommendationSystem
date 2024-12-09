@@ -71,6 +71,7 @@ public class GraphView extends JFrame {
         Layout<String, String> layout = new CustomLayout(grafo, tiposDeNodos);
         Dimension graphSize = new Dimension(1600, 1000);
         layout.setSize(graphSize);
+        getColorModel();
 
         // Configurar la visualización con tamaño ajustado
         VisualizationViewer<String, String> vv = new VisualizationViewer<>(layout, graphSize);
@@ -89,6 +90,7 @@ public class GraphView extends JFrame {
             return parts[1];
         });
         vv.getRenderContext().setEdgeLabelClosenessTransformer(e -> 0.1); // Coloca la etiqueta cerca del origen
+        vv.getColorModel();
 
         // Aumentar el tamaño de los vértices
         vv.getRenderContext().setVertexShapeTransformer(v -> new Ellipse2D.Double(-20, -20, 40, 40)); // Ajusta el tamaño aquí
@@ -97,6 +99,7 @@ public class GraphView extends JFrame {
         DefaultModalGraphMouse<String, String> gm = new DefaultModalGraphMouse<>();
         gm.setMode(ModalGraphMouse.Mode.TRANSFORMING);
         vv.setGraphMouse(gm);
+
 
         // Crear los controles de zoom
         ScalingControl scaler = new CrossoverScalingControl();
